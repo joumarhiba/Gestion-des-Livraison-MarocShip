@@ -21,6 +21,7 @@ public class Chauffeur extends  User{
     private double prime;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     private Vehicule vehicule;
+
+
 }
