@@ -25,12 +25,16 @@ public class Livraison {
     private String city_start;
     private String city_end;
     private double tarif;
+    private int status;
+
 
     @OneToOne(fetch = FetchType.EAGER)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Vehicule vehicule;
 
+
+
     @ManyToOne
-    private RespLivraison respLivraison;
+    private Manager manager;
 
 }

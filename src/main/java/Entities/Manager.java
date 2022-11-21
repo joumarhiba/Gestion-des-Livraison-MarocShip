@@ -17,5 +17,5 @@ public class Manager extends User {
 
 
     @OneToMany(mappedBy = "manager")
-    private List<RespLivraison> respLivraisons;
+    private List<Livraison> livraisons;
 }
