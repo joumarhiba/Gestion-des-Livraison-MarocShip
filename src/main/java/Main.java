@@ -1,28 +1,23 @@
-import Entities.Admin;
+import Dao.Admin.AdminDaoImp;
+import Dao.Admin.IAdminDao;
+import Entities.Manager;
 import helpers.HashingPassword;
 
-public class Main extends HibernateUtil {
-    public static void main(String[] args)  {
+public class Main {
+    public static void main(String[] args) {
 
 
-        Admin admin = new Admin();
-        HashingPassword hashingPwd = new HashingPassword();
-        String password = "abcd1234";
-        String hashedPwd = hashingPwd.hashingPassword(password);
-        admin.setEmail("admin@gmail.com");
-        admin.setLogin("adminMarocShip");
-        admin.setRole(0);
-        admin.setPassword(password);
-        if(admin.getPassword()) {
-            admin.setPassword(hashedPwd);
-            session.persist(admin);
-            transaction.commit();
-        }
-        else{
-            transaction.rollback();
-        }
-        session.close();
-        sessionFactory.close();
+        IAdminDao adminDao = new AdminDaoImp();
+        Manager manager = new Manager();
+        manager.setEmail("amine@mesbahi.com");
+
+        HashingPassword hashingPassword = new HashingPassword();
+        String pass = hashingPassword.hashingPassword("amine1234");
+        manager.setPassword(pass);
+        manager.setLogin("aminMsb");
+
+        adminDao.addManager(manager);
+
 
     }
 }

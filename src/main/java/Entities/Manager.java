@@ -14,9 +14,7 @@ import java.util.List;
 @ManagedBean(name = "manager")
 public class Manager extends User {
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "admin_id", referencedColumnName = "id")
-    private Admin admin;
+
 
     @OneToMany(mappedBy = "manager")
     private List<RespLivraison> respLivraisons;

@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>jsf-example</artifactId>
+    <artifactId>Gestion-des-Livraison-MarocShip</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>jsf-example</name>
+    <name>Gestion-des-Livraison-MarocShip</name>
     <packaging>war</packaging>
 
     <properties>

@@ -11,12 +11,7 @@ import java.util.List;
 
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor
 @ManagedBean(name = "admin")
 public class Admin extends User{
-
-
-    @OneToMany(mappedBy = "admin")
-    private List<Manager> managers;
 
 }

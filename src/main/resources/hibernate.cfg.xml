@@ -8,12 +8,13 @@
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/ship</property>
     <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">1234</property>
+    <property name="hibernate.connection.password">vendredi1120deux!</property>
     <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
 
     <property name="connection_pool_size">1</property>
-    <property name="hbm2ddl.auto">update</property>
+    <property name="hbm2ddl.auto">create</property>
     <property name="show_sql">true</property>
+
 
     <mapping class="Entities.RespLivraison"/>
     <mapping class="Entities.Vehicule"/>
@@ -22,6 +23,7 @@
     <mapping class="Entities.Admin"/>
     <mapping class="Entities.Chauffeur"/>
     <mapping class="Entities.Livraison"/>
+
 
   </session-factory>
 </hibernate-configuration>
