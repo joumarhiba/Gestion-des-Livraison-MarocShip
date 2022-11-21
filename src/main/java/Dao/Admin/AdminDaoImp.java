@@ -24,23 +24,5 @@ public class AdminDaoImp implements IAdminDao{
         this.session = sessionFactory.openSession();
     }
 
-    @Override
-    public void addManager(Manager manager) {
-        this.session.beginTransaction();
-        try {
 
-            this.session.persist(manager);
-
-        }catch (Exception e){
-
-            this.session.getTransaction().rollback();
-            System.out.println(e);
-
-        }finally {
-
-            this.session.getTransaction().commit();
-            StandardServiceRegistryBuilder.destroy( registry );
-
-        }
-    }
 }
